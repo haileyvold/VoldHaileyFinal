@@ -34,6 +34,7 @@ public class PlantDatabase {
         public Plant createPlant(String name) {
             String key = plantDbRef.child(PlantDataTag).push().getKey();
             Plant newPlant = new Plant(key, name);
+            plantDbRef.child(key).setValue("TESTING");
             plantDbRef.child(key).setValue(newPlant);
             return newPlant;
         }

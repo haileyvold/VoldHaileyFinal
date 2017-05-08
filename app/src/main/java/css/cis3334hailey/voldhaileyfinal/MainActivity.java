@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
         btnEnterNew = (Button) findViewById(R.id.buttonEnterPlant);
         btnEnterNew.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
+                Log.d("CIS3334", "In Onclick for setupEnterNewButton");
                 Intent enterPlantIntent = new Intent(view.getContext(), AddPlantActivity.class);
                 finish();
                 startActivity(enterPlantIntent);
