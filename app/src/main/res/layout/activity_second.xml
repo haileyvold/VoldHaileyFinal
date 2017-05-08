@@ -22,11 +22,11 @@
         <TextView
             android:text="The Conservatory"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
             android:id="@+id/textView3"
-            android:textColor="?android:attr/textColorSearchUrl"
+            android:textColor="@android:color/holo_green_dark"
             android:textSize="36sp"
             android:textAlignment="center"
             android:fontFamily="serif-monospace" />
@@ -35,38 +35,147 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="83dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/textView3"
-            android:layout_alignParentStart="true"
-            android:id="@+id/vertical"
-            android:weightSum="1">
+            android:layout_weight="0.03">
 
-            <ImageButton
-                android:layout_width="111dp"
-                android:layout_height="83dp"
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/pearlsucculent"
+                android:id="@+id/imageViewSucculent" />
+
+
+            <Button
+                android:text="Pearl Succulent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/buttonSucculent"
+                android:textColor="@android:color/holo_green_dark"
+                android:capitalize="none"
+                android:fontFamily="casual"
+                android:textSize="30sp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_weight="0.03">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
                 app:srcCompat="@mipmap/reddd"
-                android:id="@+id/imageButton"
-                android:elevation="0dp"
-                android:backgroundTint="?android:attr/textColorSearchUrl" />
+                android:id="@+id/imageViewRedAgla" />
 
             <Button
                 android:text="Red Aglaonema"
                 android:layout_width="match_parent"
-                android:layout_height="83dp"
-                android:id="@+id/redAgla"
+                android:layout_height="match_parent"
+                android:id="@+id/buttonRedAgla"
                 android:textSize="30sp"
                 android:textAllCaps="false"
-                android:textColor="?android:attr/textColorSearchUrl"
+                android:textColor="@android:color/holo_green_dark"
                 android:fontFamily="casual" />
-
         </LinearLayout>
 
-        <ImageButton
-            android:layout_width="111dp"
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
             android:layout_height="83dp"
-            app:srcCompat="@mipmap/pearlsucculent"
-            android:id="@+id/imageButton2"
-            android:layout_weight="0.06" />
+            android:layout_weight="0.03">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/chesnut"
+                android:id="@+id/imageViewChesnut" />
+
+            <Button
+                android:text="Guiana Chesnut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/buttonChesnut"
+                android:textColor="@android:color/holo_green_dark"
+                android:capitalize="none"
+                android:fontFamily="casual"
+                android:textSize="30sp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_weight="0.03">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/fern"
+                android:id="@+id/imageViewFern" />
+
+            <Button
+                android:text="Maidenhair Fern"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/buttonFern"
+                android:textColor="@android:color/holo_green_dark"
+                android:capitalize="none"
+                android:fontFamily="casual"
+                android:textSize="30sp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_weight="0.03">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/lily"
+                android:id="@+id/imageViewLily" />
+
+            <Button
+                android:text="Peace Lily"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/buttonLily"
+                android:textColor="@android:color/holo_green_dark"
+                android:capitalize="none"
+                android:fontFamily="casual"
+                android:textSize="30sp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_weight="0.03">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/palm"
+                android:id="@+id/imageViewPalm" />
+
+            <Button
+                android:text="Peace Lily"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/buttonPalm"
+                android:textColor="@android:color/holo_green_dark"
+                android:capitalize="none"
+                android:fontFamily="casual"
+                android:textSize="30sp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </RelativeLayout>
