@@ -1,15 +1,16 @@
 package css.cis3334hailey.voldhaileyfinal;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,27 +24,38 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    // --- Firebase Authentication
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
-    Button btnAdd, btnDelete;
+    // --- Buttons and ListViews for the Main Activity XML
+    Button btnEnterNew, btnDelete, btnAdd;
     ListView lvPlants;
-    ArrayAdapter<Plants> plantAdapter;
+    // --- Array Instantiations
+    ArrayAdapter<Plant> plantAdapter;
     List<Plant> plantList;
+    // --- Database Instantiations
     DatabaseReference plantDbRef;
     PlantDatabase plantDataSource;
+    // --- Variables
+    int positionSelected;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         setupFirebaseDataChange();
         setupListView();
-        setupAddButton();
+        setupEnterNewButton();
         setupDeleteButton();
+        setupAddButton();
 
-        btnAdd = (Button) findViewById(R.id.buttonAddPlant);
+        btnEnterNew = (Button) findViewById(R.id.buttonEnterPlant);
         btnDelete = (Button) findViewById(R.id.buttonDeletePlant);
+        btnAdd = (Button) findViewById(R.id.buttonAddPlant);
+
         mAuth = FirebaseAuth.getInstance();
 
         mAuthListener = new FirebaseAuth.AuthStateListener() {
@@ -64,22 +76,25 @@ public class MainActivity extends AppCompatActivity {
 
 
     private void setupFirebaseDataChange() {
+
+        // Write a message to the database
         plantDataSource = new PlantDatabase();
         plantDbRef = plantDataSource.open();
         plantDbRef.addValueEventListener(new ValueEventListener() {
 
+            // Read from the database
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 Log.d("CIS3334", "Starting onDataChange()");        // debugging log
                 plantList = plantDataSource.getAllPlants(dataSnapshot);
                 plantAdapter = new PlantAdapter(MainActivity.this, android.R.layout.simple_list_item_single_choice, plantList);
                 // Apply the adapter to the list
-                listViewPlants.setAdapter(plantAdapter);
+                lvPlants.setAdapter(plantAdapter);
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Log.d("CIS3334", "onCancelled: ");
+                Log.d("cis3334", "onCancelled: ");
             }
         });
     }
@@ -95,21 +110,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void setupDetailButton() {
-        buttonDetails = (Button) findViewById(R.id.buttonDetails);
-        buttonDetails.setOnClickListener(new View.OnClickListener() {
+
+    private void setupAddButton() {
+        btnAdd = (Button) findViewById(R.id.buttonAddPlant);
+        btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Log.d("MAIN", "onClick for Details");
-                Intent detailActIntent = new Intent(view.getContext(), EnterPlant.class);
-                detailActIntent.putExtra("Plant", plantList.get(positionSelected));
+                Intent addPlantIntent = new Intent(view.getContext(), SecondActivity.class);
                 finish();
-                startActivity(detailActIntent);
+                startActivity(addPlantIntent);
             }
         });
     }
 
-
-    private void setupDeleteButton() {
+    private void setupDeleteButton()  {
         btnDelete = (Button) findViewById(R.id.buttonDeletePlant);
         btnDelete.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -120,17 +133,19 @@ public class MainActivity extends AppCompatActivity {
                 plantAdapter.notifyDataSetChanged();
             }
         });
+    }
 
-        private void setupAddButton() {
-            btnAdd = (Button) findViewById(R.id.buttonAddPlant);
-            btnAdd.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View view) {
-                    Intent detailActIntent = new Intent(view.getContext(), AddPlantActivity.class);
-                    finish();
-                    startActivity(detailActIntent);
-                }
-            });
-        }
+
+    private void setupEnterNewButton() {
+        btnEnterNew = (Button) findViewById(R.id.buttonEnterPlant);
+        btnEnterNew.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent enterPlantIntent = new Intent(view.getContext(), AddPlantActivity.class);
+                finish();
+                startActivity(enterPlantIntent);
+            }
+        });
+    }
 
         @Override
         public void onStart () {
@@ -148,4 +163,3 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-}

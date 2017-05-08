@@ -54,7 +54,9 @@
                 android:capitalize="none"
                 android:fontFamily="casual"
                 android:textSize="30sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="onClick" />
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -77,7 +79,9 @@
                 android:textSize="30sp"
                 android:textAllCaps="false"
                 android:textColor="@android:color/holo_green_dark"
-                android:fontFamily="casual" />
+                android:fontFamily="casual"
+                android:onClick="onClick" />
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -101,7 +105,10 @@
                 android:capitalize="none"
                 android:fontFamily="casual"
                 android:textSize="30sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="onClick" />
+
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -125,7 +132,9 @@
                 android:capitalize="none"
                 android:fontFamily="casual"
                 android:textSize="30sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="onClick" />
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -149,7 +158,9 @@
                 android:capitalize="none"
                 android:fontFamily="casual"
                 android:textSize="30sp"
-                android:textAllCaps="false" />
+                android:textAllCaps="false"
+                android:onClick="onClick" />
+            />
         </LinearLayout>
 
         <LinearLayout
@@ -165,17 +176,42 @@
                 android:id="@+id/imageViewPalm" />
 
             <Button
-                android:text="Peace Lily"
+                android:id="@+id/buttonPalm"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/buttonPalm"
-                android:textColor="@android:color/holo_green_dark"
-                android:capitalize="none"
                 android:fontFamily="casual"
+                android:text="Majesty Palm"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_green_dark"
                 android:textSize="30sp"
-                android:textAllCaps="false" />
+                android:onClick="onClick" />
+            />
         </LinearLayout>
 
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="83dp"
+            android:layout_weight="0.03">
+
+            <ImageView
+                android:layout_width="97dp"
+                android:layout_height="match_parent"
+                app:srcCompat="@mipmap/haworthia"
+                android:id="@+id/imageViewHaworthia" />
+
+            <Button
+                android:id="@+id/buttonHaworthia"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="casual"
+                android:text="Haworthia"
+                android:textAllCaps="false"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="30sp"
+                android:onClick="onClick" />
+            />
+        </LinearLayout>
     </LinearLayout>
 
 </RelativeLayout>

@@ -3,6 +3,7 @@ package css.cis3334hailey.voldhaileyfinal;
 /**
  * Created by hvold on 5/7/2017.
  */
+
 import android.util.Log;
 
 import com.google.firebase.database.DataSnapshot;
@@ -30,7 +31,7 @@ public class PlantDatabase {
 
         }
 
-        public Plant newPlant(String name) {
+        public Plant createPlant(String name) {
             String key = plantDbRef.child(PlantDataTag).push().getKey();
             Plant newPlant = new Plant(key, name);
             plantDbRef.child(key).setValue(newPlant);
@@ -38,18 +39,18 @@ public class PlantDatabase {
         }
 
 
-        public void deleteFish(Plant plant) {
+        public void deletePlant(Plant plant) {
             String key = plant.getKey();
             plantDbRef.child(key).removeValue();
         }
 
         public List<Plant> getAllPlants(DataSnapshot dataSnapshot) {
-            List<Plant> fishList = new ArrayList<Plant>();
+            List<Plant> plantList = new ArrayList<Plant>();
             for (DataSnapshot data : dataSnapshot.getChildren()) {
                 Plant plant = data.getValue(Plant.class);
-               PlantList.add(plant);
+               plantList.add(plant);
             }
-            return PlantList;
+            return plantList;
         }
 
     }

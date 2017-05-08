@@ -17,10 +17,6 @@ public class Plant implements Serializable {
             this.name = name;
         }
 
-        public Plant(String name) {
-            this.name = name;
-        }
-
         public String getKey() {
             return key;
         }
@@ -44,5 +40,4 @@ public class Plant implements Serializable {
                     '}';
         }
     }
-}
 
