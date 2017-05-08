@@ -36,9 +36,9 @@ public class AddPlantActivity  extends AppCompatActivity {
                     String name = etName.getText().toString();
                     plantDataSource.createPlant(name);
 
-                    Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
-                    finish();
-                    startActivity(mainActivityIntent);
+                Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
+                finish();
+                startActivity(mainActivityIntent);
                 }
             });
 

@@ -9,6 +9,11 @@
     tools:context="css.cis3334hailey.voldhaileyfinal.AddPlantActivity">
 
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
@@ -19,7 +24,8 @@
         android:text="Enter a New Plant:"
         android:textAlignment="center"
         android:textColor="@android:color/holo_green_dark"
-        android:textSize="36sp" />
+        android:textSize="40sp"
+        android:layout_weight="0.09" />
 
     <EditText
         android:id="@+id/editTextName"

@@ -44,28 +44,52 @@ public class SecondActivity extends AppCompatActivity {
         if (view.getId() == R.id.buttonSucculent) {
             Plant newPlant = new Plant("1", "Pearl Succulent");
 
-
+            // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();
             startActivity(mainActivityIntent);
         }
-        if (view.getId() == R.id.buttonRedAgla) {
+        else if (view.getId() == R.id.buttonRedAgla) {
 
+            // --- Send user back to main activity screen
+            Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
+            finish();
+            startActivity(mainActivityIntent);
         }
-        if (view.getId() == R.id.buttonChesnut) {
+        else if (view.getId() == R.id.buttonChesnut) {
 
+            // --- Send user back to main activity screen
+            Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
+            finish();
+            startActivity(mainActivityIntent);
         }
-        if (view.getId() == R.id.buttonFern) {
+        else if (view.getId() == R.id.buttonFern) {
 
+            // --- Send user back to main activity screen
+            Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
+            finish();
+            startActivity(mainActivityIntent);
         }
-        if (view.getId() == R.id.buttonLily) {
+        else if (view.getId() == R.id.buttonLily) {
 
+            // --- Send user back to main activity screen
+            Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
+            finish();
+            startActivity(mainActivityIntent);
         }
-        if (view.getId() == R.id.buttonPalm) {
+        else if (view.getId() == R.id.buttonPalm) {
 
+            // --- Send user back to main activity screen
+            Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
+            finish();
+            startActivity(mainActivityIntent);
         }
-        if (view.getId() == R.id.buttonHaworthia) {
+        else if (view.getId() == R.id.buttonHaworthia) {
 
+            // --- Send user back to main activity screen
+            Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
+            finish();
+            startActivity(mainActivityIntent);
         }
 
     }
