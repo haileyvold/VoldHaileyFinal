@@ -4,6 +4,7 @@ package css.cis3334hailey.voldhaileyfinal;
  * Created by hvold on 5/7/2017.
  */
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -14,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
     PlantDatabase plantDataSource;
     // --- Variables
     int positionSelected;
+    // --- Toast Variables
+
 
 
     @Override
@@ -83,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
         // Write a message to the database
         plantDataSource = new PlantDatabase();
         plantDbRef = plantDataSource.open();
-        plantDbRef.child("Plant Data").addValueEventListener(new ValueEventListener() {
+        plantDbRef.addValueEventListener(new ValueEventListener() {
 
             // Read from the database
             @Override
@@ -109,6 +113,7 @@ public class MainActivity extends AppCompatActivity {
                                     int position, long id) {
                 positionSelected = position;
                 Log.d("MAIN", "Plant selected at position " + positionSelected);
+
             }
         });
     }
@@ -151,6 +156,8 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+
         @Override
         public void onStart () {
             super.onStart();
@@ -165,5 +172,4 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-
-    }
+        }

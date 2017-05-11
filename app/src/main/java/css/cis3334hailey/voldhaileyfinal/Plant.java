@@ -13,7 +13,12 @@ public class Plant implements Serializable {
         private String key;
         private String name;
 
-        public Plant(String name) {
+          public Plant() {
+          // Default constructor required for calls to DataSnapshot.getValue
+          }
+
+
+    public Plant(String name) {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
             this.name = name;
         }

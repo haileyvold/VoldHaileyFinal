@@ -35,14 +35,16 @@
             android:typeface="monospace" />
 
         <ListView
-            android:layout_width="match_parent"
             android:id="@+id/listViewPlants"
+            android:layout_width="match_parent"
+            android:layout_height="332dp"
+            android:layout_marginBottom="29dp"
+            android:layout_weight="0.79"
             android:choiceMode="singleChoice"
             android:clickable="false"
-            android:textSize="36sp"
-            android:layout_marginBottom="29dp"
-            android:layout_height="332dp"
-            android:layout_weight="0.79" />
+            android:elevation="1dp"
+            android:textAlignment="center"
+            android:textSize="36sp" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -58,7 +60,7 @@
                 android:layout_height="83dp"
                 android:backgroundTint="@android:color/holo_green_dark"
                 android:fontFamily="serif-monospace"
-                android:text="@string/add_plant_v1"
+                android:text="@string/add_plant"
                 android:textAllCaps="false"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
                 android:textSize="24sp"
@@ -66,7 +68,7 @@
 
 
             <Button
-                android:text="@string/delete_plant_v1"
+                android:text="@string/delete_plant"
                 android:layout_width="120dp"
                 android:id="@+id/buttonDeletePlant"
                 android:textColor="@color/common_google_signin_btn_text_dark_default"
@@ -78,7 +80,7 @@
                 tools:ignore="ButtonStyle" />
 
             <Button
-                android:text="@string/enter_new_v1"
+                android:text="@string/enter_new"
                 android:layout_width="match_parent"
                 android:layout_height="83dp"
                 android:id="@+id/buttonEnterPlant"

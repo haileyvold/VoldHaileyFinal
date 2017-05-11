@@ -91,4 +91,23 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="action_settings">Settings</string>
+    <string name="add_new_plant">Add New Plant</string>
+    <string name="enter_a_new_plant">Enter a New Plant:</string>
+    <string name="plant_name">Plant Name</string>
+    <string name="name">Name</string>
+    <string name="guiana_chesnut">Guiana Chesnut</string>
+    <string name="haworthia">Haworthia</string>
+    <string name="maidenhair_fern">Maidenhair Fern</string>
+    <string name="majesty_palm">Majesty Palm</string>
+    <string name="peace_lily">Peace Lily</string>
+    <string name="pearl_succulent">Pearl Succulent</string>
+    <string name="red_aglaonema">Red Aglaonema</string>
+    <string name="the_conservatory">The Conservatory</string>
+    <string name="my_greenhouse">My Greenhouse</string>
+    <string name="add_plant">Add Plant</string>
+    <string name="delete_plant">Delete Plant</string>
+    <string name="enter_new">Enter New</string>
+    <string name="add_plant_v1">Add Plant</string>
+    <string name="delete_plant_v1">Delete Plant</string>
+    <string name="enter_new_v1">Enter New</string>
 </resources>
