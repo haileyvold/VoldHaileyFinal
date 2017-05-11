@@ -11,6 +11,8 @@ import android.widget.Button;
  */
 
 public class SecondActivity extends AppCompatActivity {
+
+    // --- Instantiations for each plant button
     Button btnSucculent,
             btnRedAgla,
             btnChesnut,
@@ -18,6 +20,7 @@ public class SecondActivity extends AppCompatActivity {
             btnLily,
             btnPalm,
             btnHaworthia;
+    // --- Instantiation for the database
     PlantDatabase plantDataSource;
 
 
@@ -26,6 +29,7 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
 
+        // Connect each instantiation with its respective button
         btnSucculent = (Button) findViewById(R.id.buttonSucculent);
         btnRedAgla = (Button) findViewById(R.id.buttonRedAgla);
         btnChesnut = (Button) findViewById(R.id.buttonChesnut);
@@ -34,7 +38,6 @@ public class SecondActivity extends AppCompatActivity {
         btnPalm = (Button) findViewById(R.id.buttonPalm);
         btnHaworthia = (Button) findViewById(R.id.buttonHaworthia);
 
-
         plantDataSource = new PlantDatabase();
         plantDataSource.open();
 
@@ -42,50 +45,56 @@ public class SecondActivity extends AppCompatActivity {
 
     public void onClick(View view){
         if (view.getId() == R.id.buttonSucculent) {
-            Plant newPlant = new Plant("1", "Pearl Succulent");
-
+            // Add the plant to the database
+            plantDataSource.createPlant("Pearl Succulent");
             // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();
             startActivity(mainActivityIntent);
         }
         else if (view.getId() == R.id.buttonRedAgla) {
-
+            // Add the plant to the database
+            plantDataSource.createPlant("Red Aglaonema");
             // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();
             startActivity(mainActivityIntent);
         }
         else if (view.getId() == R.id.buttonChesnut) {
-
+            // Add the plant to the database
+            plantDataSource.createPlant("Guiana Chesnut");
             // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();
             startActivity(mainActivityIntent);
         }
         else if (view.getId() == R.id.buttonFern) {
-
+            // Add the plant to the database
+            plantDataSource.createPlant("Maidenhair Fern");
             // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();
             startActivity(mainActivityIntent);
         }
         else if (view.getId() == R.id.buttonLily) {
-
+            // Add the plant to the database
+            plantDataSource.createPlant("Peace Lily");
             // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();
             startActivity(mainActivityIntent);
         }
         else if (view.getId() == R.id.buttonPalm) {
-
+            // Add the plant to the database
+            plantDataSource.createPlant("Royal Palm");
             // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();
             startActivity(mainActivityIntent);
         }
         else if (view.getId() == R.id.buttonHaworthia) {
-
+            // Add the plant to the database
+            plantDataSource.createPlant("Haworthia");
             // --- Send user back to main activity screen
             Intent mainActivityIntent = new Intent(view.getContext(), MainActivity.class);
             finish();

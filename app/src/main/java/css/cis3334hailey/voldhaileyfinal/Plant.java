@@ -8,9 +8,15 @@ import java.io.Serializable;
 
 
 public class Plant implements Serializable {
+
+        // --- String Instantiations for Plant Variables
         private String key;
         private String name;
 
+        public Plant(String name) {
+        // Default constructor required for calls to DataSnapshot.getValue(User.class)
+            this.name = name;
+        }
 
         public Plant(String key, String name) {
             this.key = key;

@@ -1,23 +1,25 @@
 package css.cis3334hailey.voldhaileyfinal;
 
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
-
-import java.util.List;
-
-import static android.content.Context.LAYOUT_INFLATER_SERVICE;
 
 /**
  * Created by haileyvold on 5/8/17.
  */
 
 
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.TextView;
+import java.util.List;
+
+import static android.content.Context.LAYOUT_INFLATER_SERVICE;
+
+
 public class PlantAdapter extends ArrayAdapter<Plant> {
 
+    // Create the list, context and layout for the Adapter
     private List<Plant> plantList;
     private Context context;
     private int layoutResource;
