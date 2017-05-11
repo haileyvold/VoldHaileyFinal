@@ -19,8 +19,10 @@
         android:weightSum="1"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        tools:ignore="ExtraText,UselessParent">
+        tools:ignore="ExtraText,UselessParent"><![CDATA[
         android:layout_weight="3.0">
+
+        ]]>
 
         <TextView
             android:id="@+id/textView"
@@ -35,20 +37,21 @@
             android:typeface="monospace" />
 
         <ListView
-            android:layout_width="match_parent"
             android:id="@+id/listViewPlants"
+            android:layout_width="match_parent"
+            android:layout_height="332dp"
+            android:layout_marginBottom="29dp"
+            android:layout_weight="0.79"
             android:choiceMode="singleChoice"
             android:clickable="false"
-            android:textSize="36sp"
-            android:layout_marginBottom="29dp"
-            android:layout_height="332dp"
-            android:layout_weight="0.79" />
+            android:textSize="36sp" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="80dp"
-            android:layout_weight="1.09">
+            android:layout_weight="1.09"
+            android:weightSum="1">
             android:layout_weight="3.0">
 
 
@@ -66,27 +69,27 @@
 
 
             <Button
-                android:text="@string/delete_plant_v1"
-                android:layout_width="120dp"
                 android:id="@+id/buttonDeletePlant"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
-                android:textAllCaps="false"
-                android:textSize="24sp"
+                android:layout_width="121dp"
+                android:layout_height="83dp"
                 android:backgroundTint="@android:color/holo_green_dark"
                 android:fontFamily="serif-monospace"
-                android:layout_height="83dp"
+                android:text="@string/delete_plant_v1"
+                android:textAllCaps="false"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="24sp"
                 tools:ignore="ButtonStyle" />
 
             <Button
-                android:text="@string/enter_new_v1"
-                android:layout_width="match_parent"
-                android:layout_height="83dp"
                 android:id="@+id/buttonEnterPlant"
-                android:textColor="@color/common_google_signin_btn_text_dark_default"
-                android:textAllCaps="false"
-                android:textSize="24sp"
+                android:layout_width="121dp"
+                android:layout_height="83dp"
                 android:backgroundTint="@android:color/holo_green_dark"
                 android:fontFamily="serif-monospace"
+                android:text="@string/enter_new_v1"
+                android:textAllCaps="false"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="24sp"
                 tools:ignore="ButtonStyle" />
 
 

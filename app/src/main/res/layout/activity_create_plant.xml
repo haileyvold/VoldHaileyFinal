@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1"
+    tools:context="css.cis3334hailey.voldhaileyfinal.CreatePlantActivity">
+
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.09" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="@string/enter_a_new_plant"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="40sp"
+        android:layout_weight="0.09" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusableInTouchMode="false"
+        android:fontFamily="casual"
+        android:inputType="textPersonName"
+        android:text="@string/plant_name"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="24sp"
+        tools:ignore="LabelFor" />
+
+    <Button
+        android:id="@+id/buttonAddNew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="serif-monospace"
+        android:text="@string/add_new_plant"
+        android:textAllCaps="false"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="30sp" />
+
+</LinearLayout>

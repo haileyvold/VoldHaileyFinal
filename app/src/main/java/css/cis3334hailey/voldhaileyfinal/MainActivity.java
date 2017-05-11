@@ -4,7 +4,6 @@ package css.cis3334hailey.voldhaileyfinal;
  * Created by hvold on 5/7/2017.
  */
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,7 +14,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -123,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.buttonAddPlant);
         btnAdd.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                Intent addPlantIntent = new Intent(view.getContext(), SecondActivity.class);
+                Intent addPlantIntent = new Intent(view.getContext(), AddPlantActivity.class);
                 finish();
                 startActivity(addPlantIntent);
             }
@@ -149,7 +147,7 @@ public class MainActivity extends AppCompatActivity {
         btnEnterNew.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Log.d("CIS3334", "In Onclick for setupEnterNewButton");
-                Intent enterPlantIntent = new Intent(view.getContext(), AddPlantActivity.class);
+                Intent enterPlantIntent = new Intent(view.getContext(), CreatePlantActivity.class);
                 finish();
                 startActivity(enterPlantIntent);
             }
